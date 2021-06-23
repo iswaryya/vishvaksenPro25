@@ -14,11 +14,25 @@ class Ball{
     }
     display(){
         
-        ellipseMode(RADIUS);
+        var ballPos=this.body.position;		
 
-        fill("yellow");
+			push()
+			translate(ballPos.x, ballPos.y);
+			rectMode(CENTER)
+			
+			fill(255,0,255)
+			imageMode(CENTER);
+			image(this.image, 0,0,this.r, this.r)
+			
+			pop()
+        
+        // ************   We need to display the image instead of circle hence commenting these lines *****
+       
+        // ellipseMode(RADIUS);
 
-        circle(this.body.position.x, this.body.position.y, this.radius);
+      //  fill("yellow");
+
+       // circle(this.body.position.x, this.body.position.y, this.radius);
 
     }       
 };
