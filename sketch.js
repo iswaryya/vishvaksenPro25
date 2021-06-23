@@ -16,9 +16,9 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 	
-	groundObject=new ground(width/2,670,width,20);
-	dustbinObj=new dustbin(1200,650);
-	ballobj=new ball (700,600, 10);
+	groundObject=new Ground(width/2,670,width,20);
+	dustbinObj=new Dustbin(1200,650);
+	ballobj=new Ball(700,600, 10);
 	Engine.run(engine)
   
 }
